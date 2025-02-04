@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 
 export const ProductItem = (props) => {
+
   return (
-    
     <div className='box-border max-w-fit h-fit overflow-hidden shadow-md shadow-zinc-400 p-4 cursor-pointer '>
-      <Link to='/product-details'>
+      <Link  to={`/product-details/${props.id}`}>
       <div className=" w-48 h-64 overflow-hidden">
       <img src={props.src} alt='picture' className="w-full h-full object-cover"  />
       </div>

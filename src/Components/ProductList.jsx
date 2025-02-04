@@ -28,6 +28,7 @@ const ProductList = (props) => {
             product.category === props.category && (
               <ProductItem
                 key={product.id}
+                id={product.id}
                 price={product.price}
                 src={product.thumbnail}
                 brand={product.brand}

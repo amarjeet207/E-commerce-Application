@@ -7,7 +7,7 @@ import ProductDetail from './Components/ProductDetail';
 
 import WomenTop from './Components/All Products/WomenTop'
 import WomenBag from './Components/All Products/WomenBag'
-import womenDress from './Components/All Products/womenDress';
+import Dress from './Components/All Products/Dress'
 import WomenWatch from './Components/All Products/WomenWatch'
 import WomenShoe from './Components/All Products/WomenShoe'
 

@@ -7,7 +7,7 @@ import ProductDetail from './Components/ProductDetail';
 
 import WomenTop from './Components/All Products/WomenTop'
 import WomenBag from './Components/All Products/WomenBag'
-import WomenDress from './Components/All Products/womenDress';
+import womenDress from './Components/All Products/womenDress';
 import WomenWatch from './Components/All Products/WomenWatch'
 import WomenShoe from './Components/All Products/WomenShoe'
 
@@ -57,7 +57,7 @@ const router = createBrowserRouter([
   },
   {
     path:'/women-dresses',
-    element:<WomenDress/>
+    element:<womenDress/>
   },
   {
     path:'/men-shirts',

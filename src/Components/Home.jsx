@@ -12,19 +12,10 @@ import womenShoe from "../assets/women-shoes.jpg"
 import womenWatch from "../assets/women-watches.jpg"
 import menShirt from "../assets/men-shirt.webp"
 import menShoe from "../assets/men-shoe.webp"
-import menSunglass from "../assets/men-sunglasses.webp"
-import menWatch from "../assets/men-watch.jpg"
-import makeup from "../assets/makeup.webp"
-import skincare from "../assets/skincare.webp"
-import perfume from "../assets/perfumes.avif"
-
-import mobiles from "../assets/mobiles.jpg"
-import tablet from "../assets/tablet.jpg"
-import laptop from "../assets/laptop.jpg"
-import accessories from "../assets/accessories.webp"
-
+import arrowForward from "../assets/arrow_forward.svg"
 import ProductList from "./ProductList";
 import Footer from "./Footer";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -42,14 +33,15 @@ const Home = () => {
           <p className="text-zinc-700 font-mono md:text-4xl ">
             DISCOVER LASTEST TREND
           </p>
+          <Link to='/category'>
           <button className="bg-pink-400 rounded-xl p-1 pl-3 pr-3 md:ml-40 text-sm font-sans">
             Shop Now
-          </button>
+          </button></Link>
         </div>
       </div>
 
       {/* ICONS - SUPPORT , RETURNS ETC */}
-      <div className="grid grid-cols-5 gap-5 justify-items-center items-center mt-20 ml-2 mr-2">
+      <div className="grid md:grid-cols-4 gap-3 justify-items-center items-center mt-20 ml-10 mr-10">
         <div className="flex flex-col">
           <img
             src={delivery}
@@ -76,14 +68,6 @@ const Home = () => {
 
         <div className="flex flex-col">
           <img
-            src={returns}
-            className="md:w-20 sm:w-16 border-2 border-zinc-400 p-4 rounded-full mb-2"
-          />
-          <p className="text-zinc-800 font-serif">Easy Exchange</p>
-        </div>
-
-        <div className="flex flex-col">
-          <img
             src={credit}
             className="md:w-20 sm:w-16 border-2 border-zinc-400 p-4 rounded-full"
           />
@@ -93,64 +77,26 @@ const Home = () => {
 
       {/* CATEGORIES */}
 
-      <div className="md:pl-10 mt-28 bg-zinc-50 p-5 ">
+      <div className="md:pl-10 mt-30 bg-zinc-50 p-5 ">
         <h1 className="text-zinc-800 text-3xl font-serif text-center">
           Categories
         </h1>
 
-        {/* WOMEN-- */}
-        <div className=" mt-14" id="women">
-          <h1 className="text-zinc-800 text-2xl font-serif">Women</h1>
-
-          <div className=" grid grid-cols-5 gap-5 justify-items-center">
-            <ProductList item="Tops" src={womenTops} />
-            <ProductList item="Dresses" src={womenDress} />
-            <ProductList item="Bags" src={womenBags} />
-            <ProductList item="Shoes" src={womenShoe} />
-            <ProductList item="Watches" src={womenWatch} />
+        <div className=" mt-14">
+          <div className=" grid md:grid-cols-5 gap-5 justify-items-center items-center">
+            <Link to='/women-tops'><ProductList item="Tops" src={womenTops} /></Link>
+            <Link to='/women-dresses'><ProductList item="Dresses" src={womenDress} /></Link>
+            <Link to='/women-bags'> <ProductList item="Bags" src={womenBags} /> </Link>
+            <Link to='/women-shoes'> <ProductList item="Shoes" src={womenShoe} /></Link>
+            <Link to='/women-watches'><ProductList item="Watches" src={womenWatch} /></Link>
+            <Link to='/men-shirts'><ProductList item="Shirts" src={menShirt} /></Link>
+            <Link to='/men-shoes'><ProductList item="Shoes" src={menShoe} /></Link>
+            <Link to='/category'><ProductList item="View All" src={arrowForward} /></Link>
           </div>
         </div>
-
-        {/* MEN-- */}
-        <div className=" mt-14" id="men">
-          <h1 className="text-zinc-800 text-2xl font-serif">Men</h1>
-
-          <div className=" grid grid-cols-5 gap-5 justify-items-center">
-            <ProductList item="Shirts" src={menShirt} />
-            <ProductList item="Jeans" src={menShirt} />
-            <ProductList item="Sunglasses" src={menSunglass} />
-            <ProductList item="Watches" src={menWatch} />
-            <ProductList item="Shoes" src={menShoe} />
-          </div>
-        </div>
-
-         {/* ELECTRONICS-- */}
-         <div className=" mt-14" id="electronics">
-          <h1 className="text-zinc-800 text-2xl font-serif">Electronics</h1>
-
-          <div className=" grid grid-cols-5 gap-5 justify-items-center">
-            <ProductList item="Laptops" src={laptop} />
-            <ProductList item="Headphones" src={laptop} />
-            <ProductList item="Accessories" src={accessories} />
-            <ProductList item="Smartphones" src={mobiles} />
-            <ProductList item="Tablets" src={tablet} />
-          </div>
-        </div>
-
-        {/* BEAUTY-- */}
-        <div className="mt-14" id="beauty">
-          <h1 className="text-zinc-800 text-2xl font-serif">Beauty</h1>
-
-          <div className=" grid grid-cols-5 gap-5 justify-items-center">
-            <ProductList item="Makeup" src={makeup} />
-            <ProductList item="Fragances" src={perfume} />
-            <ProductList item="Skin-care" src={skincare} />
-            <ProductList item="Bath" src={skincare} />
-            <ProductList item="Tools" src={skincare} />
-          </div>
-        </div>
-
-       
+      </div>
+      <div className='bg-pink-700 mt-10 text-center text-slate-50 md:text-3xl sm:text-xl font-serif p-2'>
+        <p>Get 20% Off On Order Above 599</p>
       </div>
       <Footer/>
     </div>

@@ -3,7 +3,7 @@ import ProductItem  from '../ProductItem'
 import Header from '../Header'
 import womenTop from "../../assets/women-top.jpg"
 
-const makeup = () => {
+const Makeup = () => {
   return (
     <div className='box-border max-w-screen h-screen'>
     <Header/>
@@ -27,4 +27,4 @@ const makeup = () => {
   )
 }
 
-export default makeup
+export default Makeup

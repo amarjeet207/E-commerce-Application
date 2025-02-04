@@ -2,7 +2,7 @@ import React from 'react'
 import ProductItem  from '../ProductItem'
 import Header from '../Header'
 
-const womenTop = () => {
+const WomenTop = () => {
   return (
     <div className='box-border max-w-screen h-screen'>
       <Header/>
@@ -26,4 +26,4 @@ const womenTop = () => {
   )
 }
 
-export default womenTop
+export default WomenTop

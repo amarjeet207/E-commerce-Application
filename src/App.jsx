@@ -5,25 +5,24 @@ import Home from './Components/Home'
 import ProductCategory from './Components/ProductCategory';
 import ProductDetail from './Components/ProductDetail';
 
-import WomenTop from './Components/All Products/womenTop'
-import WomenBag from './Components/All Products/womenBag'
-import WomenDress from './Components/All Products/womenDress'
-import WomenWatch from './Components/All Products/womenWatch'
-import WomenShoe from './Components/All Products/womenShoe'
+import WomenTop from './Components/All Products/WomenTop'
+import WomenBag from './Components/All Products/WomenBag'
+import WomenDress from './Components/All Products/womenDress';
+import WomenWatch from './Components/All Products/WomenWatch'
+import WomenShoe from './Components/All Products/WomenShoe'
 
-import Tablets from './Components/All Products/tablets'
-import Mobiles from './Components/All Products/mobiles'
-import Laptop from './Components/All Products/laptop'
-import Accessories from './Components/All Products/accessories'
+import Tablets from './Components/All Products/Tablets'
+import Mobiles from './Components/All Products/Mobiles'
+import Laptop from './Components/All Products/Laptop'
+import Accessories from './Components/All Products/Accessories'
+import Perfume from './Components/All Products/perfume';
+import Skincare from './Components/All Products/Skincare'
+import Makeup from './Components/All Products/Makeup'
 
-import Perfume from './Components/All Products/perfume'
-import Skincare from './Components/All Products/skincare'
-import Makeup from './Components/All Products/makeup'
-
-import MenWatch from './Components/All Products/menWatch'
-import MenSunglasses from './Components/All Products/menSunglasses'
-import MenShoe from './Components/All Products/menShoe'
-import MenShirt from './Components/All Products/menShirt'
+import MenWatch from './Components/All Products/MenWatch'
+import MenSunglasses from './Components/All Products/MenSunglasses'
+import MenShoe from './Components/All Products/MenShoe'
+import MenShirt from './Components/All Products/MenShirt'
 
 import NotFound from './Components/NotFound'
 import Cart from './Components/Cart'

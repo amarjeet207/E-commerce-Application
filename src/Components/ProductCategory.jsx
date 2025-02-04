@@ -16,11 +16,11 @@ import mobiles from "../assets/mobiles.jpg";
 import tablet from "../assets/tablet.jpg";
 import laptop from "../assets/laptop.jpg";
 import accessories from "../assets/accessories.webp";
-import ProductList from "./ProductList";
+import CategoryItem from "./CategoryItem";
 import Header from "./Header";
 import Footer from "./Footer";
 
-const ProductCategory = () => {
+const ProductCategoryItem = () => {
   return (
     <div className="box-border">
       <Header />
@@ -40,19 +40,19 @@ const ProductCategory = () => {
 
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center">
             <Link to="/women-tops">
-              <ProductList item="Tops" src={womenTops} />
+              <CategoryItem item="Tops" src={womenTops} />
             </Link>
             <Link to="/women-dresses">
-              <ProductList item="Dresses" src={womenDress} />
+              <CategoryItem item="Dresses" src={womenDress} />
             </Link>
             <Link to="/women-bags">
-              <ProductList item="Bags" src={womenBags} />{" "}
+              <CategoryItem item="Bags" src={womenBags} />{" "}
             </Link>
             <Link to="/women-shoes">
-              <ProductList item="Shoes" src={womenShoe} />
+              <CategoryItem item="Shoes" src={womenShoe} />
             </Link>
             <Link to="/women-watches">
-              <ProductList item="Watches" src={womenWatch} />
+              <CategoryItem item="Watches" src={womenWatch} />
             </Link>
           </div>
         </div>
@@ -63,16 +63,16 @@ const ProductCategory = () => {
 
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center">
             <Link to="/men-shirts">
-              <ProductList item="Shirts" src={menShirt} />
+              <CategoryItem item="Shirts" src={menShirt} />
             </Link>
             <Link to="/men-shoes">
-              <ProductList item="Shoes" src={menShoe} />
+              <CategoryItem item="Shoes" src={menShoe} />
             </Link>
             <Link to="/men-sunglasses">
-              <ProductList item="Sunglasses" src={menSunglass} />
+              <CategoryItem item="Sunglasses" src={menSunglass} />
             </Link>
             <Link to="/men-watches">
-              <ProductList item="Watches" src={menWatch} />
+              <CategoryItem item="Watches" src={menWatch} />
             </Link>
           </div>
         </div>
@@ -82,10 +82,10 @@ const ProductCategory = () => {
           <h1 className="text-zinc-800 text-2xl font-serif">Electronics</h1>
 
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center">
-            <Link to='/laptop'>  <ProductList item="Laptops" src={laptop} /></Link>
-            <Link to='/mobile-accessories'><ProductList item="Accessories" src={accessories} /></Link>
-            <Link to='/mobiles'>  <ProductList item="Smartphones" src={mobiles} /></Link>
-            <Link to='/tablets'> <ProductList item="Tablets" src={tablet} /></Link>
+            <Link to='/laptop'>  <CategoryItem item="Laptops" src={laptop} /></Link>
+            <Link to='/mobile-accessories'><CategoryItem item="Accessories" src={accessories} /></Link>
+            <Link to='/mobiles'>  <CategoryItem item="Smartphones" src={mobiles} /></Link>
+            <Link to='/tablets'> <CategoryItem item="Tablets" src={tablet} /></Link>
 
           </div>
         </div>
@@ -95,9 +95,9 @@ const ProductCategory = () => {
           <h1 className="text-zinc-800 text-2xl font-serif">Beauty</h1>
 
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center">
-            <Link to='/makeup'>  <ProductList item="Makeup" src={makeup} /></Link>
-            <Link to='/fragances'> <ProductList item="Fragances" src={perfume} /></Link>
-            <Link to='/skincare'> <ProductList item="Skin-care" src={skincare} /></Link>
+            <Link to='/makeup'>  <CategoryItem item="Makeup" src={makeup} /></Link>
+            <Link to='/fragances'> <CategoryItem item="Fragances" src={perfume} /></Link>
+            <Link to='/skincare'> <CategoryItem item="Skin-care" src={skincare} /></Link>
           </div>
         </div>
       </div>
@@ -107,4 +107,4 @@ const ProductCategory = () => {
   );
 };
 
-export default ProductCategory;
+export default ProductCategoryItem;

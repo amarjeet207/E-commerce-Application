@@ -13,7 +13,7 @@ import womenWatch from "../assets/women-watches.jpg"
 import menShirt from "../assets/men-shirt.webp"
 import menShoe from "../assets/men-shoe.webp"
 import arrowForward from "../assets/arrow_forward.svg"
-import ProductList from "./ProductList";
+import CategoryItem from "./CategoryItem";
 import Footer from "./Footer";
 import { Link } from "react-router-dom";
 
@@ -84,14 +84,14 @@ const Home = () => {
 
         <div className=" mt-14">
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center items-center">
-            <Link to='/women-tops'><ProductList item="Tops" src={womenTops} /></Link>
-            <Link to='/women-dresses'><ProductList item="Dresses" src={womenDress} /></Link>
-            <Link to='/women-bags'> <ProductList item="Bags" src={womenBags} /> </Link>
-            <Link to='/women-shoes'> <ProductList item="Shoes" src={womenShoe} /></Link>
-            <Link to='/women-watches'><ProductList item="Watches" src={womenWatch} /></Link>
-            <Link to='/men-shirts'><ProductList item="Shirts" src={menShirt} /></Link>
-            <Link to='/men-shoes'><ProductList item="Shoes" src={menShoe} /></Link>
-            <Link to='/category'><ProductList item="View All" src={arrowForward} /></Link>
+            <Link to='/women-tops'><CategoryItem item="Tops" src={womenTops} /></Link>
+            <Link to='/women-dresses'><CategoryItem item="Dresses" src={womenDress} /></Link>
+            <Link to='/women-bags'> <CategoryItem item="Bags" src={womenBags} /> </Link>
+            <Link to='/women-shoes'> <CategoryItem item="Shoes" src={womenShoe} /></Link>
+            <Link to='/women-watches'><CategoryItem item="Watches" src={womenWatch} /></Link>
+            <Link to='/men-shirts'><CategoryItem item="Shirts" src={menShirt} /></Link>
+            <Link to='/men-shoes'><CategoryItem item="Shoes" src={menShoe} /></Link>
+            <Link to='/CategoryItem'><CategoryItem item="View All" src={arrowForward} /></Link>
           </div>
         </div>
       </div>

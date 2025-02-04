@@ -9,12 +9,14 @@ import WomenTop from './Components/All Products/WomenTop'
 import WomenBag from './Components/All Products/WomenBag'
 import WomenWatch from './Components/All Products/WomenWatch'
 import WomenShoe from './Components/All Products/WomenShoe'
+import Dress from './Components/All Products/Dress';
 
 import Tablets from './Components/All Products/Tablets'
 import Mobiles from './Components/All Products/Mobiles'
 import Laptop from './Components/All Products/Laptop'
 import Accessories from './Components/All Products/Accessories'
-import Perfume from './Components/All Products/perfume';
+
+import Fragances from './Components/All Products/Fragances';
 import Skincare from './Components/All Products/Skincare'
 import Makeup from './Components/All Products/Makeup'
 
@@ -55,6 +57,10 @@ const router = createBrowserRouter([
     element:<WomenWatch/>
   },
   {
+    path:'/women-dresses',
+    element:<Dress/>
+  },
+  {
     path:'/men-shirts',
     element:<MenShirt/>
   },
@@ -75,12 +81,12 @@ const router = createBrowserRouter([
     element:<Makeup/>
   },
   {
-    path:'/perfumes',
-    element:<Perfume/>
-  },
-  {
     path:'/skincare',
     element:<Skincare/>
+  },
+  {
+    path:'/fragances',
+    element:<Fragances/>
   },
   {
     path:'/laptop',

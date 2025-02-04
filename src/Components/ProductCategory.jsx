@@ -96,7 +96,7 @@ const ProductCategory = () => {
 
           <div className=" grid md:grid-cols-5 gap-5 justify-items-center">
             <Link to='/makeup'>  <ProductList item="Makeup" src={makeup} /></Link>
-            <Link to='/perfumes'> <ProductList item="Fragances" src={perfume} /></Link>
+            <Link to='/fragances'> <ProductList item="Fragances" src={perfume} /></Link>
             <Link to='/skincare'> <ProductList item="Skin-care" src={skincare} /></Link>
           </div>
         </div>

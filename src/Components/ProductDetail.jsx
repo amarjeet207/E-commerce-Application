@@ -1,13 +1,18 @@
 // Import necessary modules and components
-import React from 'react';
+import React, { useState } from 'react';
 import Header from './Header'; 
 import Footer from './Footer'; 
 import star from "../assets/star2.svg"; 
 import useFetchProducts from "./Hooks/useFetchProducts"; 
 import { useParams } from 'react-router-dom'; 
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../Redux/reducers'; 
 
 // Define the ProductDetail component
 const ProductDetail = () => {
+  const dispatch = useDispatch(); // Get the dispatch function from the Redux store
+  const [added, setAdded] = useState(false); // State to track if the product has been added to the cart
+
   // Get the product id from the URL parameters
   const { id } = useParams();
 
@@ -32,6 +37,20 @@ const ProductDetail = () => {
 
   // Find the product that matches the id from the URL parameters
   const product = products.filter(product => product.id == id)[0];
+
+  // Function to handle adding the product to the cart
+  const handleAddToCart = () => {
+    const productDetails = {
+      id: product.id,
+      src: product.thumbnail,
+      brand: product.brand,
+      title: product.title,
+      price: product.price
+    };
+
+    dispatch(addToCart(productDetails)); // Dispatch the addToCart action with the product details
+    setAdded(true); // Set the added state to true
+  };
 
   return (
     <div className='box-border font-serif max-w-screen h-screen'>
@@ -58,8 +77,14 @@ const ProductDetail = () => {
           <p className='text-lg text-zinc-800 mt-2'>$ {product.price}</p>
           <p className='text-sm text-zinc-600 mt-2'>{product.description}</p>
           <div className='flex gap-4 mt-5'>
-            <button className='bg-pink-600 text-slate-50 text-xs p-2 pl-2 pr-2 font-sans cursor-pointer'>Add To Cart</button>
-            <button className='bg-zinc-800 text-slate-50 text-xs p-2 pl-3 pr-3 font-sans cursor-pointer'>Buy Now</button>
+            <button 
+              className={`text-xs p-2 pl-2 pr-2 font-sans cursor-pointer ${added ? 'bg-pink-400' : 'bg-pink-600'} text-slate-50`}
+              onClick={handleAddToCart}
+              disabled={added}
+            >
+              {added ? 'ADDED' : 'ADD TO CART'}
+            </button>
+          
           </div>
           <div className='text-md text-zinc-800 mt-6'>In Stock: {product.stock}</div>
           <div className='text-md text-zinc-800 mt-1'>SKU: {product.sku}</div>
@@ -82,11 +107,9 @@ const ProductDetail = () => {
         ))}
       </div>
 
-    
       <Footer />
     </div>
   );
 };
-
 
 export default ProductDetail;

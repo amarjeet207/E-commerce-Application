@@ -27,6 +27,7 @@ import MenShirt from './Components/All Products/MenShirt'
 
 import NotFound from './Components/NotFound'
 import Cart from './Components/Cart'
+import Checkout from './Components/Checkout';
 
 
 const App = () => {
@@ -111,6 +112,10 @@ const router = createBrowserRouter([
   {
     path:'/product-details/:id',
     element:<ProductDetail/>
+  },
+  {
+    path:'/checkout',
+    element:<Checkout/>
   },
   {
     path:'*',

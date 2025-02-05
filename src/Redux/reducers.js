@@ -42,10 +42,14 @@ const cartSlice = createSlice({
         // Decrement the quantity if the item exists and quantity is greater than 1
         item.quantity -= 1;
       }
+    },
+     // Reducer to clear the cart
+     clearCart(state) {
+      state.cartItems = [];
     }
   }
 });
 
 // Export the action creators and reducer
-export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity } = cartSlice.actions;
+export const { addToCart, removeFromCart, increaseQuantity, decreaseQuantity,clearCart } = cartSlice.actions;
 export default cartSlice.reducer;

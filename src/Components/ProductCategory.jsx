@@ -34,7 +34,7 @@ const ProductCategoryItem = () => {
           Categories
         </h1>
 
-        {/* WOMEN-- */}
+        {/* WOMEN CATEGORY-- */}
         <div className=" mt-14" id="women">
           <h1 className="text-zinc-800 text-2xl font-serif">Women</h1>
 
@@ -57,7 +57,7 @@ const ProductCategoryItem = () => {
           </div>
         </div>
 
-        {/* MEN-- */}
+        {/* MEN CATEGORY-- */}
         <div className=" mt-14" id="men">
           <h1 className="text-zinc-800 text-2xl font-serif">Men</h1>
 
@@ -77,7 +77,7 @@ const ProductCategoryItem = () => {
           </div>
         </div>
 
-        {/* ELECTRONICS-- */}
+        {/* ELECTRONICS CATEGORY-- */}
         <div className=" mt-14" id="electronics">
           <h1 className="text-zinc-800 text-2xl font-serif">Electronics</h1>
 
@@ -90,7 +90,7 @@ const ProductCategoryItem = () => {
           </div>
         </div>
 
-        {/* BEAUTY-- */}
+        {/* BEAUTY CATEGORY-- */}
         <div className="mt-14" id="beauty">
           <h1 className="text-zinc-800 text-2xl font-serif">Beauty</h1>
 

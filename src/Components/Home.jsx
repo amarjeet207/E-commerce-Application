@@ -1,5 +1,9 @@
 import React from "react";
 import Header from "./Header";
+import Footer from "./Footer";
+import CategoryItem from "./CategoryItem";
+import { Link } from "react-router-dom";
+
 import bg from "../assets/home-bg2.jpeg";
 import credit from "../assets/credit_score.svg";
 import delivery from "../assets/delivery_truck.svg";
@@ -13,9 +17,8 @@ import womenWatch from "../assets/women-watches.jpg"
 import menShirt from "../assets/men-shirt.webp"
 import menShoe from "../assets/men-shoe.webp"
 import arrowForward from "../assets/arrow_forward.svg"
-import CategoryItem from "./CategoryItem";
-import Footer from "./Footer";
-import { Link } from "react-router-dom";
+
+
 
 const Home = () => {
   return (
@@ -94,10 +97,13 @@ const Home = () => {
             <Link to='/category'><CategoryItem item="View All" src={arrowForward} /></Link>
           </div>
         </div>
+        
       </div>
+
       <div className='bg-pink-700 mt-10 text-center text-slate-50 md:text-3xl sm:text-xl font-serif p-2'>
         <p>Get 20% Off On Order Above 599</p>
       </div>
+
       <Footer/>
     </div>
   );

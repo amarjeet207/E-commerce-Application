@@ -91,7 +91,7 @@ const Home = () => {
             <Link to='/women-watches'><CategoryItem item="Watches" src={womenWatch} /></Link>
             <Link to='/men-shirts'><CategoryItem item="Shirts" src={menShirt} /></Link>
             <Link to='/men-shoes'><CategoryItem item="Shoes" src={menShoe} /></Link>
-            <Link to='/CategoryItem'><CategoryItem item="View All" src={arrowForward} /></Link>
+            <Link to='/category'><CategoryItem item="View All" src={arrowForward} /></Link>
           </div>
         </div>
       </div>

@@ -29,7 +29,7 @@ const dispatch = useDispatch(); // Get the dispatch function from the Redux stor
           </div>
 
           <div className='flex xs:gap-2 md:gap-20'>
-            <p className='text-lg text-zinc-800'>Rs. {product.price}</p>
+            <p className='text-lg text-zinc-800'>${product.price}</p>
             <img src={close} className='w-5 cursor-pointer' alt='remove' onClick={() => dispatch(removeFromCart(product.id))} />
           </div>
 

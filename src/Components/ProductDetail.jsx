@@ -55,7 +55,7 @@ const ProductDetail = () => {
             <span className='text-md text-zinc-600'>({product.reviews.length} Reviews)</span>
           </div>
 
-          <p className='text-lg text-zinc-800 mt-2'>Rs. {product.price}</p>
+          <p className='text-lg text-zinc-800 mt-2'>$ {product.price}</p>
           <p className='text-sm text-zinc-600 mt-2'>{product.description}</p>
           <div className='flex gap-4 mt-5'>
             <button className='bg-pink-600 text-slate-50 text-xs p-2 pl-2 pr-2 font-sans cursor-pointer'>Add To Cart</button>

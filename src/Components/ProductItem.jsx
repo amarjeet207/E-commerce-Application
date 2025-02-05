@@ -33,7 +33,7 @@ export const ProductItem = (props) => {
         </div>
         <p className='text-lg font-bold font-serif text-zinc-900'>{props.brand}</p>
         <p className='font-serif text-zinc-800 '>{props.title}</p>
-        <p className='font-serif text-zinc-800 '>Rs. {props.price}</p>
+        <p className='font-serif text-zinc-800 '>${props.price}</p>
       </Link>
 
       {/* Button to add the product to the cart */}

@@ -4,11 +4,36 @@ import ProductItem from "./ProductItem";
 import Header from "./Header";
 import Footer from "./Footer"; 
 import useFetchProducts from "./Hooks/useFetchProducts";
+import Search from '../assets/search.svg';
 
-// Define the ProductList component
+
 const ProductList = (props) => {
-  // Use custom hook to fetch products and manage loading and error states
-  const { products, loading, error } = useFetchProducts();
+
+  const [inputValue, setInputValue] = useState('');  // State to manage search input value
+
+  const { products, loading, error } = useFetchProducts(); // Use custom hook to fetch products and manage loading and error states
+
+  const [filteredProducts, setFilteredProducts] = useState([])   // State to manage filtered products
+
+
+  // useEffect to filter products based on search input and products data
+  useEffect(() => {
+    let result = products;
+
+    // Filter products based on search input
+    if (inputValue) {
+      result = result.filter(products => 
+        products.title.toLowerCase().includes(inputValue.toLowerCase()) 
+      );
+    }
+    setFilteredProducts(result);
+  }, [inputValue, products]);
+
+
+  // Handle search input change
+  const handleInputValue = (e) => {
+    setInputValue(e.target.value);
+  };
 
   // Display loading message while products are being fetched
   if (loading)
@@ -26,20 +51,37 @@ const ProductList = (props) => {
       </p>
     );
 
-  // Render the product list
+
   return (
     <div>
 
       <Header />
 
-      {/* Display heading passed as a prop */}
-      <h1 className="ml-10 text-3xl underline font-serif text-zinc-700 mt-16">
+      {/* Display heading passed as a prop and Search input */}
+      <div className="flex gap-10 justify-between p-4  items-center mt-16">
+      <h1 className=" text-3xl underline font-serif text-zinc-700 ">
         {props.heading}
       </h1>
 
+       {/* Search */}
+       <span className="border border-slate-300 flex justify-center gap-1 p-1 pl-2 max-w-fit rounded-lg">
+          <img src={Search} className="w-5 cursor-pointer"/>
+          <input 
+            type="text" 
+            name="search" 
+            className="max-w-30 rounded-lg outline-none" 
+            placeholder="Search" 
+            onChange={handleInputValue} 
+            value={inputValue} 
+          />
+        </span>
+
+      </div>
+     
+
       {/* Render the list of products filtered by category */}
       <div className="m-20 grid md:grid-cols-3 gap-24 justify-items-center items-center">
-        {products.map(
+        {filteredProducts.map(
           (product) =>
             product.category === props.category && (
               <ProductItem

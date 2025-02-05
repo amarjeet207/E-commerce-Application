@@ -2,6 +2,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 import { removeFromCart, increaseQuantity, decreaseQuantity } from '../Redux/reducers';
+import close from '../assets/close.svg'
 
 // Define the CartItem component
 const CartItem = ({ product }) => {

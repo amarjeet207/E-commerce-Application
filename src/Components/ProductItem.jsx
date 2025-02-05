@@ -38,11 +38,11 @@ export const ProductItem = (props) => {
 
       {/* Button to add the product to the cart */}
       <button 
-        className={`text-xs p-2 pl-3 pr-3 font-sans cursor-pointer ${added ? 'bg-green-500' : 'bg-pink-600'} text-slate-50`}
+        className={`text-xs p-2 pl-3 pr-3 mt-3 font-sans cursor-pointer ${added ? 'bg-pink-400' : 'bg-pink-600'} text-slate-50`}
         onClick={handleAddToCart}
         disabled={added} // Disable the button if the product has been added
       >
-        {added ? 'ADDED' : 'ADD TO CART'} // Change the button text based on the added state
+        {added ? 'ADDED' : 'ADD TO CART'} 
       </button>
     </div>
   );

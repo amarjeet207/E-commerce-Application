@@ -59,7 +59,7 @@ const ProductList = (props) => {
 
       {/* Display heading passed as a prop and Search input */}
       <div className="flex gap-10 justify-between p-4  items-center mt-16">
-      <h1 className=" text-3xl underline font-serif text-zinc-700 ">
+      <h1 className="xs:text-xl sm:text-3xl underline font-serif text-zinc-700 ">
         {props.heading}
       </h1>
 

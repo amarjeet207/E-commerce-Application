@@ -35,9 +35,9 @@ const Cart = () => {
 
       {/* Display the total amount only if there are items in the cart */}
       {cartItems.length > 0 && (
-        <div className='flex justify-around xl:justify-center xl:gap-80 p-2 bg-pink-800 text-slate-200 text-2xl m-10 mr-20 ml-20 rounded-md'>
+        <div className='flex justify-around p-4 bg-pink-800 text-slate-200 text-2xl m-10 md:mr-20 md:ml-20 rounded-md'>
           <p>Total Amount</p>
-          <p className='mr-10'>Rs. {totalAmount}</p>
+          <p className=''>Rs. {totalAmount}</p>
         </div>
       )}
 

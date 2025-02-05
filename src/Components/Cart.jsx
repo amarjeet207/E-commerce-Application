@@ -11,7 +11,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems || []);
   
   // Calculate the total amount by summing up the prices of all cart items
-  const totalAmount = cartItems.reduce((total, item) => total + item.price, 0);
+  const totalAmount = cartItems.reduce((total, item) => Math.floor(total + item.price), 0);
 
   return (
     <div className='font-serif box-border max-w-screen'>
